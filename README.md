@@ -1,22 +1,33 @@
 # hack-yourself
 Sample project showing how to hack your own servers
 
-README Status - IN-progress (If you need quick details - reach me on twitter `@ravindrasingh01` to send a message).
 
-# Official Kali Linux Docker
+ + docker compose
+
+
+## Prerequisite
+
+ * Docker for mac or download docker from https://www.docker.com/
+ * Check if you have 10GB space available in your HD
+ * Docker composer to make it easy to run at local.
+
+## What's included
+
+![](docs/images/docker-compose.png)
+
+###  Official Kali Linux Docker
 This Kali Linux Docker image provides a minimal base install of the latest version of the Kali Linux Rolling Distribution.
 There are no tools added to this image, so you will need to install them yourself.
 For details about Kali Linux metapackages, check https://www.kali.org/news/kali-linux-metapackages/
 
-# Features in Kali Docker image
+#### Features in Kali Docker image
 * Metasploit Framework (https://www.metasploit.com/)
 
+### Local Wordpress for Evaluation
 
-# Prerequisite
-* Docker for mac or download docker from https://www.docker.com/
-* Check if you have 10GB space available in your HD
-* Docker composer to make it easy to run at local.
 
+
+## Usage
 
 # Setup Instructions
 * Clone the repo from `https://github.com/holisticon/hack-yourself.git`.
@@ -36,10 +47,9 @@ For details about Kali Linux metapackages, check https://www.kali.org/news/kali-
 ###  Development
 * Please fork and raise a PR to review
 ### Issues
-* Please create an issue under https://github.com/ravindrasingh22/kali-docker/issues
+* Please create an issue under https://github.com/holisticon/hack-yourself/issues
 
-### Documentation
-* Please create/help in the Documentation under https://github.com/ravindrasingh22/kali-docker/wiki
 
 ## Contributors
+* ** Martin Reinhardt *Technical Architect* - [HyperY2K](http://github.com/hypery2k/)
 * **Ravindra Singh**  *Technical Architect* - [RavindraSingh22](http://github.com/ravindrasingh22/)
