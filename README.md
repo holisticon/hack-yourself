@@ -2,9 +2,9 @@
 Sample project showing how to hack your own servers
 
 > **Legal Disclaimer**:
-* Users are responsible for usage of the prepared setup
-* We does not encourage, condone, or orchestrate attempts to hack into other servers or any other illegal activities. The writings and instructions contained inside this website are entertainment / educational purposes only
-* We are not responsible if you break the law using techniques listed on this website. This setup is provided to users so that they may learn how to protect their own websites/web applications with similar vulnerabilities learned from the challenges
+> * Users are responsible for usage of the prepared setup
+> * We does not encourage, condone, or orchestrate attempts to hack into other servers or any other illegal activities. The writings and instructions contained inside this website are entertainment / educational purposes only
+> * We are not responsible if you break the law using techniques listed on this website. This setup is provided to users so that they may learn how to protect their own websites/web applications with similar vulnerabilities learned from the challenges
 
 ## Prerequisite
 
@@ -26,8 +26,8 @@ For details about Kali Linux metapackages, check https://www.kali.org/news/kali-
 
 ### Local Wordpress for Evaluation
 
-TODO
-
+* Preconfigured WordPress 4.6
+* MySQL Container
 
 ## Usage
 
@@ -40,7 +40,11 @@ TODO
 (Its not good practice yo run the pentesting on the prod server or the unauthorized server, its not legal so I am suggesting this to run on local and these instruction will help you to setup the project at local server, try to make the same sever as your project has on public facing).
 
 # Run the demo code
--- To Be added
+After running `./start.sh` your already inside the kali container and can run nikto etc. against the local wordpress:
+```
+nikto -host blog_app -C all
+wpscan blog_app
+```
 
 # Troubleshooting
 -- To be added
