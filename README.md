@@ -1,9 +1,10 @@
 # hack-yourself
 Sample project showing how to hack your own servers
 
-
- + docker compose
-
+> **Legal Disclaimer**:
+* Users are responsible for usage of the prepared setup
+* We does not encourage, condone, or orchestrate attempts to hack into other servers or any other illegal activities. The writings and instructions contained inside this website are entertainment / educational purposes only
+* We are not responsible if you break the law using techniques listed on this website. This setup is provided to users so that they may learn how to protect their own websites/web applications with similar vulnerabilities learned from the challenges
 
 ## Prerequisite
 
@@ -25,6 +26,7 @@ For details about Kali Linux metapackages, check https://www.kali.org/news/kali-
 
 ### Local Wordpress for Evaluation
 
+TODO
 
 
 ## Usage
@@ -51,5 +53,5 @@ For details about Kali Linux metapackages, check https://www.kali.org/news/kali-
 
 
 ## Contributors
-* ** Martin Reinhardt *Technical Architect* - [HyperY2K](http://github.com/hypery2k/)
+* **Martin Reinhardt** *Technical Architect* - [HyperY2K](http://github.com/hypery2k/)
 * **Ravindra Singh**  *Technical Architect* - [RavindraSingh22](http://github.com/ravindrasingh22/)
