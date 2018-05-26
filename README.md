@@ -8,7 +8,7 @@ Sample project showing how to hack your own servers
 
 ## Prerequisite
 
- * Docker for mac or download docker from https://www.docker.com/
+ * Docker for mac or download docker from [Docker](https://www.docker.com/)
  * Check if you have 10GB space available in your HD
  * Docker composer to make it easy to run at local.
 
@@ -19,7 +19,7 @@ Sample project showing how to hack your own servers
 ###  Official Kali Linux Docker
 This Kali Linux Docker image provides a minimal base install of the latest version of the Kali Linux Rolling Distribution.
 There are no tools added to this image, so you will need to install them yourself.
-For details about Kali Linux metapackages, check https://www.kali.org/news/kali-linux-metapackages/
+For details about Kali Linux metapackages, check the [homepage](https://www.kali.org/news/kali-linux-metapackages/)
 
 #### Features in Kali Docker image
 * Metasploit Framework (https://www.metasploit.com/)
@@ -42,8 +42,13 @@ For details about Kali Linux metapackages, check https://www.kali.org/news/kali-
 # Run the demo code
 After running `./start.sh` your already inside the kali container and can run nikto etc. against the local wordpress:
 ```
-nikto -host blog_app -C all
+nikto -C all -host blog_app
 wpscan blog_app
+
+```
+Run attack against blog inside docker:
+```
+/usr/local/scripts/wp_2017-8295.sh <use-your-mail-domain-here> localhost admin
 ```
 
 # Troubleshooting

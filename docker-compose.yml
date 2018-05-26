@@ -9,6 +9,8 @@ services:
       - MYSQL_USER
       - MYSQL_PASSWORD
       - MYSQL_DATABASE
+    volumes:
+      - ./docker/blog:/docker-entrypoint-initdb.d
     ports:
       - "${DB_PORT}:3306"
     healthcheck:
