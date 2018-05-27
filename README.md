@@ -53,7 +53,7 @@ Run attack against blog inside docker:
 
 Run attack against [SpringBoot App](https://github.com/holisticon/SpringBreakVulnerableApp) inside docker:
 ```
-/usr/local/scripts/sb_2017-8046.sh sb_app:8080 echo
+/usr/local/scripts/sb_2017-8046.sh sb_app:8080 calc.exe
 ```
 
 https://github.com/holisticon/SpringBreakVulnerableApp
