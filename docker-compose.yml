@@ -37,6 +37,18 @@ services:
         timeout: 10s
         retries: 5
 
+  spring:
+    container_name: sb_app
+    build: docker/springboot_app
+    ports:
+      - "${SPRINGBOOT_PORT}:8080"
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:8080"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+
+
   kali:
     container_name: kali_linux
     build: docker/kali

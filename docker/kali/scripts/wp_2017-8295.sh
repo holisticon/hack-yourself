@@ -4,7 +4,7 @@
 # https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html
 #
 # Usage:
-# ./wordpress-host-check <fake_domain> <domain> <username>
+# wp_2017-8295.sh <fake_domain> <domain> <username>
 #
 # <fake_domain>
 #   The domain you want to redirect to.

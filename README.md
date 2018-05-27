@@ -48,9 +48,15 @@ wpscan blog_app
 ```
 Run attack against blog inside docker:
 ```
-/usr/local/scripts/wp_2017-8295.sh <use-your-mail-domain-here> localhost admin
+/usr/local/scripts/wp_2017-8295.sh <use-your-mail-domain-here> blog_app admin
 ```
 
+Run attack against [SpringBoot App](https://github.com/holisticon/SpringBreakVulnerableApp) inside docker:
+```
+/usr/local/scripts/sb_2017-8046.sh <use-your-mail-domain-here> sb_app:8080 calc.exe
+```
+
+https://github.com/holisticon/SpringBreakVulnerableApp
 # Troubleshooting
 -- To be added
 
@@ -64,3 +70,11 @@ Run attack against blog inside docker:
 ## Contributors
 * **Martin Reinhardt** *Technical Architect* - [HyperY2K](http://github.com/hypery2k/)
 * **Ravindra Singh**  *Technical Architect* - [RavindraSingh22](http://github.com/ravindrasingh22/)
+
+
+## Update dependency graph
+
+```
+docker run --rm -it --name dcv -v $(pwd):/input pmsipilot/docker-compose-viz render -m image docker-compose.yml &&\
+  mv docker-compose.png docs/images/
+```
