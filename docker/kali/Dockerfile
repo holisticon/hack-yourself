@@ -1,11 +1,9 @@
-FROM kalilinux/kali-linux-docker
+FROM toolisticon/kalilinux
 
 ENV DEBIAN_FRONTEND noninteractive
 ADD ./init.sh /init.sh
 ADD scripts /usr/local/scripts
 # Install metasploit, pip and fierce
-RUN apt-get -y update ; apt-get -y --force-yes install ruby metasploit-framework kali-linux-full
+RUN apt-get -y update ; apt-get -y --force-yes install ruby metasploit-framework
 
-# Attach this container to stdin when running, like this:
-# docker run -t -i linux/kali/metasploit
 CMD /init.sh
