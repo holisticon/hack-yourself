@@ -19,7 +19,7 @@
 # Link: https://stevegrunwell.com/blog/keeping-wordpress-secure/
 # License: MIT
 #
-# tag::wp_2017-8295[]
+# tag::code[]
 FAKE_DOMAIN=$1
 DOMAIN=$2
 USERNAME=$3
@@ -47,4 +47,4 @@ else
 		echo -e "> $RESPONSE: Good news! $DOMAIN appears to be safe from this exploit.\n"
 	fi
 fi
-# end::wp_2017-8295[]
+# end::code[]
