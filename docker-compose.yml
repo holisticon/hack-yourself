@@ -10,7 +10,7 @@ services:
       - MYSQL_PASSWORD
       - MYSQL_DATABASE
     volumes:
-      - ./docker/blog:/docker-entrypoint-initdb.d
+      - ./docker/blog/db:/docker-entrypoint-initdb.d
     ports:
       - "${DB_PORT}:3306"
     healthcheck:
@@ -21,7 +21,7 @@ services:
 
   blog:
     container_name: blog_app
-    image: wordpress:4.6
+    build: docker/blog
     environment:
       - WORDPRESS_DB_NAME
       - WORDPRESS_DB_USER

