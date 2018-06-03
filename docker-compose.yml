@@ -52,7 +52,12 @@ services:
   kali:
     container_name: kali_linux
     build: docker/kali
+    ports:
+      - "8443:8443"
+      - "8888:8888"
     cap_add:
       - NET_ADMIN
+    volumes:
+      - "./docker/kali/share:/share"
     stdin_open: true
     tty: true
